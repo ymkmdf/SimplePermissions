@@ -52,3 +52,5 @@ Android简单动态获取权限获取
         Toast.makeText(this,"勾选拒绝了",Toast.LENGTH_SHORT).show();
     }
 ~~~
+
+(*￣︶￣)

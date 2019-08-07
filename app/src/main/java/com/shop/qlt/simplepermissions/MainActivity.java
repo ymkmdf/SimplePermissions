@@ -21,10 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void requestPermissions(){
-        MPermission.with(this)
-                .addRequestCode(23231)
-                .permissions(Manifest.permission.CAMERA)
-                .request();
+        MPermission.with(this).addRequestCode(23231).permissions(Manifest.permission.CAMERA).request();
     }
 
     @Override
