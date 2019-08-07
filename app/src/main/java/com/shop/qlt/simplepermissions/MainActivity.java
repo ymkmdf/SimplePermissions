@@ -21,7 +21,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void requestPermissions(){
-        MPermission.with(this).addRequestCode(23231).permissions(Manifest.permission.CAMERA).request();
+        MPermission.with(this)
+                .addRequestCode(23231)
+                .permissions(Manifest.permission.CAMERA)
+                .request();
     }
 
     @Override
@@ -31,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnMPermissionDenied(23231)
     public void onMpermission(){
-        Toast.makeText(this,"失败了",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"拒绝了",Toast.LENGTH_SHORT).show();
     }
 
     @OnMPermissionGranted(23231)
@@ -41,6 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
     @OnMPermissionNeverAskAgain(23231)
     public void onMPermissionNeverAskAgain(){
-        Toast.makeText(this,"拒绝失败了",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"勾选拒绝了",Toast.LENGTH_SHORT).show();
     }
 }
